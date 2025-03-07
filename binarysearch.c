@@ -11,9 +11,19 @@ int binarySearch(int arr[], int left, int right, int key) {
 }
 
 int main() {
-    int arr[] = {1, 3, 5, 7, 9};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int key = 5;
+    int n, key;
+    printf("Enter number of elements (sorted order): ");
+    scanf("%d", &n);
+    int arr[n];
+
+    printf("Enter %d sorted elements: ", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Enter element to search: ");
+    scanf("%d", &key);
+
     int result = binarySearch(arr, 0, n - 1, key);
     if (result != -1)
         printf("Found at index %d", result);
