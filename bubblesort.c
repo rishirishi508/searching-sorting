@@ -13,9 +13,19 @@ void bubbleSort(int arr[], int n) {
 }
 
 int main() {
-    int arr[] = {5, 3, 8, 1, 2};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    int n;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+    
+    printf("Enter %d elements: ", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
     bubbleSort(arr, n);
+
+    printf("Sorted array: ");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
