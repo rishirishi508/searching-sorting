@@ -8,9 +8,19 @@ int linearSearch(int arr[], int n, int key) {
 }
 
 int main() {
-    int arr[] = {4, 2, 9, 7, 1};
-    int n = sizeof(arr) / sizeof(arr[0]);
-    int key = 7;
+    int n, key;
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+    int arr[n];
+
+    printf("Enter %d elements: ", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("Enter element to search: ");
+    scanf("%d", &key);
+
     int result = linearSearch(arr, n, key);
     if (result != -1)
         printf("Found at index %d", result);
